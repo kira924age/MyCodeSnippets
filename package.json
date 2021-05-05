@@ -6,6 +6,8 @@
   "author": "kira924age <kira924age@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "markdown-it": "^12.0.6",
+    "markdown-it-katex": "github:kira924age/markdown-it-katex",
     "vuepress": "^1.8.2"
   },
   "scripts": {

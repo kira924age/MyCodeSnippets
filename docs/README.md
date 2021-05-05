@@ -1,16 +1,24 @@
-# Hello VuePress
+---
+sidebarDepth: 3
+---
 
-* This is my-code-snippets2
+# Welcome to My Code Snippets
 
-```cpp
-#include <iostream>
+これは私が競技プログラミングや CTF でよく使うコード片をまとめたものです.
+`VuePress` という静的サイトジェネレータを使ってドキュメントを作成し,
+`GitHub Pages` というホスティングサービスを使って公開しています.
 
-using namespace std;
+Python3, C++ による実装例を載せています.
 
-int main() {
-  cout << "Hello" << endl;
+## Python
 
-  return 0;
-}
-```
+### 整数論
+
+* [素数判定 (試し割り法)](./python/trial_division.html)
+
+## C++
+
+### 整数論
+
+* [素数判定 (試し割り法)](./cpp/trial_division.html)
 
