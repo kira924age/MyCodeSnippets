@@ -1,9 +1,5 @@
 module.exports = {
-  locales: {
-    "/": {
-      lang: "ja"
-    }
-  },
+  locales: { "/": { lang: "ja" } },
   head: [
     [
       "link",
@@ -33,6 +29,7 @@ module.exports = {
     nav: [
       { text: "Python", link: "/python/" },
       { text: "C++", link: "/cpp/" },
+      { text: "Java", link: "/java/" },
       {
         text: "GitHub",
         link: "https://github.com/kira924age/my-code-snippets2"
@@ -48,6 +45,14 @@ module.exports = {
         }
       ],
       "/cpp/": [
+        {
+          title: "整数論",
+          collapsable: false,
+          sidebarDepth: 3,
+          children: ["trial_division"]
+        }
+      ],
+      "/java/": [
         {
           title: "整数論",
           collapsable: false,
