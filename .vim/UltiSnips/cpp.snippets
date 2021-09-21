@@ -1,0 +1,17 @@
+snippet shrink_coordinate
+template <class T> std::vector<int> shrink_coordinate(std::vector<T> &a) {
+  std::vector<T> b = a;
+
+  std::sort(b.begin(), b.end());
+  b.erase(std::unique(b.begin(), b.end()), b.end());
+
+  int N = a.size();
+
+  std::vector<int> res(N);
+  for (int i = 0; i < N; i++) {
+    res[i] = std::lower_bound(b.begin(), b.end(), a[i]) - b.begin();
+  }
+
+  return res;
+}
+endsnippet

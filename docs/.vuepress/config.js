@@ -17,50 +17,33 @@ module.exports = {
       }
     ]
   ],
-
   markdown: {
     extendMarkdown: md => {
       md.use(require("markdown-it-katex"));
     }
   },
+  plugins: [["vuepress-plugin-code-copy", true]],
+
   title: "My Code Snippets",
   themeConfig: {
     lastUpdated: "Last Updated",
     nav: [
-      { text: "Python", link: "/python/" },
-      { text: "C++", link: "/cpp/" },
-      { text: "Java", link: "/java/" },
+      {
+        text: "About",
+        link: "/about"
+      },
       {
         text: "GitHub",
-        link: "https://github.com/kira924age/my-code-snippets2"
+        link: "https://github.com/kira924age/my-code-snippets"
       }
     ],
-    sidebar: {
-      "/python/": [
-        {
-          title: "整数論",
-          collapsable: false,
-          sidebarDepth: 3,
-          children: ["trial_division"]
-        }
-      ],
-      "/cpp/": [
-        {
-          title: "整数論",
-          collapsable: false,
-          sidebarDepth: 3,
-          children: ["trial_division"]
-        }
-      ],
-      "/java/": [
-        {
-          title: "整数論",
-          collapsable: false,
-          sidebarDepth: 3,
-          children: ["trial_division"]
-        }
-      ],
-      "/": [""]
-    }
+    sidebar: [
+      {
+        title: "その他",
+        collapsable: false,
+        sidebarDepth: 3,
+        children: ["other/shrink_coordinate"]
+      }
+    ]
   }
 };
