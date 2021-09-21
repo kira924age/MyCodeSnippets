@@ -12,6 +12,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git pull
       - run: yarn
         working-directory: ${{ github.workspace }}/docs
       - run: yarn docs:build
@@ -25,7 +26,7 @@ jobs:
       - name: git checkout
         run: |
           git branch -a
-          git checkout -b gh-pages
+          git checkout -b gh-pages origin/gh-pages
           ls
           rm -rf *
           git checkout main -- docs/.vuepress/dist
