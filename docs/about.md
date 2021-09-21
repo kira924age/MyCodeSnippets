@@ -17,8 +17,8 @@ UltiSnips のスニペットファイルは拡張子ごとに異なっていて,
 
 このサイトに掲載されている Snippet を UltiSnips で使える形式のスニペットファイルにしたものが以下のファイルです.
 
-* `~/.vim/UltiSnips/cpp.snippets`
-* `~/.vim/UltiSnips/python.snippets`
+* [~/.vim/UltiSnips/cpp.snippets](https://github.com/kira924age/MyCodeSnippets/blob/main/.vim/UltiSnips/cpp.snippets)
+* [~/.vim/UltiSnips/python.snippets](https://github.com/kira924age/MyCodeSnippets/blob/main/.vim/UltiSnips/cpp.snippets)
 
 UltiSnips を Install して, 上記のスニペットファイルを適切なディレクトリに配置した上で,
 Vim で適当なファイルを開き, Snippet 名を入力して Tab key を押すと, Snippet が展開されます.

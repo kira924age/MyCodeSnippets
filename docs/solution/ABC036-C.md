@@ -55,7 +55,7 @@ int main() {
 }
 ```
 
-### Python3
+### Python
 
 * submission: [https://atcoder.jp/contests/abc036/submissions/26035982](https://atcoder.jp/contests/abc036/submissions/26035982)
 
