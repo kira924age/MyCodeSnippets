@@ -1,2 +1,0 @@
-# My Code Snippets
-
