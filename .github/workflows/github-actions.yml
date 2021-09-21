@@ -24,7 +24,7 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - name: git checkout
         run: |
-          git checkout -b gh-pages origin/gh-pages
+          git checkout gh-pages
           rm -rf *
           git checkout main -- docs/.vuepress/dist
       - name: copy & delete files
