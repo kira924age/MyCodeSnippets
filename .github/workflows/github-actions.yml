@@ -25,7 +25,7 @@ jobs:
       - name: git checkout
         run: |
           git checkout -b gh-pages
-          git pull origin gh-pages
+          ls
           rm -rf *
           git checkout main -- docs/.vuepress/dist
       - name: copy & delete files
