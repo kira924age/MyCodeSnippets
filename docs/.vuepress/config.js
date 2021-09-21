@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         text: "GitHub",
-        link: "https://github.com/kira924age/my-code-snippets"
+        link: "https://github.com/kira924age/MyCodeSnippets"
       }
     ],
     sidebar: [

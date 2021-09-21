@@ -1,0 +1,39 @@
+name: GitHub Actions
+on: 
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - name: git setting
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      - run: yarn
+        working-directory: ${{ github.workspace }}/docs
+      - run: yarn docs:build
+        working-directory: ${{ github.workspace }}/docs
+      - name: Commit files
+        run: |
+          git add -A
+          if ! git diff-index --quiet HEAD --; then git commit -a -m "Auto Build (By GitHub Actions)"; fi;
+          git push
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: git checkout
+        run: |
+          git checkout -b gh-pages origin/gh-pages
+          rm -rf *
+          git checkout main -- docs/.vuepress/dist
+      - name: copy & delete files
+        run: |
+          cp -rf docs/.vuepress/dist/* .
+          rm -rf docs/.vuepress/dist
+      - name: git commit
+        run: |
+          git add -A
+          if ! git diff-index --quiet HEAD --; then git commit -a -m "Update gh-pages (By GitHub Actions)"; fi;
+          git push
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
