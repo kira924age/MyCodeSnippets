@@ -1,0 +1,7 @@
+snippet shrink_coordinate
+def shrink_coordinate(a):
+    b = sorted(list(set(a)))
+    table = {v: k for k, v in enumerate(b)}
+
+    return map(lambda x: table[x], a)
+endsnippet

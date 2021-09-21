@@ -18,11 +18,11 @@ UltiSnips のスニペットファイルは拡張子ごとに異なっていて,
 このサイトに掲載されている Snippet を UltiSnips で使える形式のスニペットファイルにしたものが以下のファイルです.
 
 * [~/.vim/UltiSnips/cpp.snippets](https://github.com/kira924age/MyCodeSnippets/blob/main/.vim/UltiSnips/cpp.snippets)
-* [~/.vim/UltiSnips/python.snippets](https://github.com/kira924age/MyCodeSnippets/blob/main/.vim/UltiSnips/cpp.snippets)
+* [~/.vim/UltiSnips/python.snippets](https://github.com/kira924age/MyCodeSnippets/blob/main/.vim/UltiSnips/python.snippets)
 
 UltiSnips を Install して, 上記のスニペットファイルを適切なディレクトリに配置した上で,
 Vim で適当なファイルを開き, Snippet 名を入力して Tab key を押すと, Snippet が展開されます.
-Snippet 名は関数名や構造体・クラス名と同じです.
+Snippet 名は関数名や構造体・クラス名と文字列を設定しています.
 
 ## 間違えについて
 
