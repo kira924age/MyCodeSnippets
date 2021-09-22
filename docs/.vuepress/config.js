@@ -25,7 +25,9 @@ module.exports = {
   plugins: [["vuepress-plugin-code-copy", true]],
 
   title: "My Code Snippets",
+  theme: "default-prefers-color-scheme",
   themeConfig: {
+    overrideTheme: 'dark',
     lastUpdated: "Last Updated",
     nav: [
       {
