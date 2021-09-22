@@ -5,5 +5,5 @@
 
 ## その他
 
-* [座標圧縮](/other/shrink_coordinate) (`shrink_coordinate`)
+* [座標圧縮](/other/shrink_coordinate)
 
