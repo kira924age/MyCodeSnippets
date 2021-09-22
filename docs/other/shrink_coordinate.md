@@ -68,6 +68,7 @@ C++ の `std::map` は定数倍が遅いので, 数列 $A$ のある要素が座
 * [ABC036-C: 座圧](../solution/ABC036-C)
 * [ABC113-C: ID](../solution/ABC113-C)
 * [ABC213-C: Reorder Cards](../solution/ABC213-C)
+* [ABC188-D: Sunuke Prime](../solution/ABC188-D)
 
 ## 参考文献
 

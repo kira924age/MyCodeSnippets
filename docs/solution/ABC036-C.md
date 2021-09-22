@@ -1,4 +1,5 @@
 # ABC036-C: 座圧
+
 ## 問題
 
 * [https://atcoder.jp/contests/abc036/tasks/abc036_c](https://atcoder.jp/contests/abc036/tasks/abc036_c)
