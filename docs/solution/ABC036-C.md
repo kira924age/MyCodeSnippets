@@ -1,5 +1,4 @@
 # ABC036-C: 座圧
-
 ## 問題
 
 * [https://atcoder.jp/contests/abc036/tasks/abc036_c](https://atcoder.jp/contests/abc036/tasks/abc036_c)
@@ -57,7 +56,7 @@ int main() {
 
 ### Python
 
-* submission: [https://atcoder.jp/contests/abc036/submissions/26035982](https://atcoder.jp/contests/abc036/submissions/26035982)
+* submission: [https://atcoder.jp/contests/abc036/submissions/26037500](https://atcoder.jp/contests/abc036/submissions/26037500)
 
 ```python
 #!/usr/bin/env python3
@@ -67,7 +66,7 @@ def shrink_coordinate(a):
     b = sorted(list(set(a)))
     table = {v: k for k, v in enumerate(b)}
 
-    return map(lambda x: table[x], a)
+    return list(map(lambda x: table[x], a))
 
 
 N = int(input())
