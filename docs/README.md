@@ -1,4 +1,4 @@
-# My Code Snippets
+# Home
 
 これは私が競技プログラミングや CTF でよく使うコード片をまとめたものです.
 詳しくは [About](./about) を見てください.

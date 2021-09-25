@@ -24,10 +24,10 @@ module.exports = {
   },
   plugins: [["vuepress-plugin-code-copy", true]],
 
-  title: "My Code Snippets",
+  title: "My Code Snippets2",
   theme: "default-prefers-color-scheme",
   themeConfig: {
-    overrideTheme: 'dark',
+    overrideTheme: "dark",
     lastUpdated: "Last Updated",
     nav: [
       {
