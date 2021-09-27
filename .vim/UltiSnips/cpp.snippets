@@ -15,3 +15,31 @@ template <class T> std::vector<int> shrink_coordinate(std::vector<T> &a) {
   return res;
 }
 endsnippet
+
+snippet caesar_cipher
+std::string caesar_cipher(std::string &s, int n) {
+  char table[0xff] = {0};
+
+  for (int t = 0; t < 0xff; t++) {
+    table[t] = t;
+  }
+
+  for (int i = 0; i < 26; i++) {
+    char upper_ch_src = 'A' + i;
+    char upper_ch_dst = 'A' + (i + n) % 26;
+    char lower_ch_src = 'a' + i;
+    char lower_ch_dst = 'a' + (i + n) % 26;
+
+    table[(int)upper_ch_src] = upper_ch_dst;
+    table[(int)lower_ch_src] = lower_ch_dst;
+  }
+
+  std::string res = "";
+  for (int i = 0; i < (int)s.size(); i++) {
+    char ch = s[i];
+    res += table[(int)ch];
+  }
+
+  return res;
+}
+endsnippet

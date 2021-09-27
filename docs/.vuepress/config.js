@@ -41,6 +41,12 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: "暗号",
+        collapsable: false,
+        sidebarDepth: 3,
+        children: ["crypto/caesar_cipher"]
+      },
+      {
         title: "その他",
         collapsable: false,
         sidebarDepth: 3,
