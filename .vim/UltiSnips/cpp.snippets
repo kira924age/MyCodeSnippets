@@ -1,3 +1,19 @@
+snippet prime_factor
+std::map<long long, int> prime_factor(long long n) {
+  std::map<long long, int> res;
+  for (long long x = 2; x * x <= n; x++) {
+    while (n % x == 0) {
+      ++res[x];
+      n /= x;
+    }
+  }
+  if (n != 1) {
+    res[n] = 1;
+  }
+  return res;
+}
+endsnippet
+
 snippet shrink_coordinate
 template <class T> std::vector<int> shrink_coordinate(std::vector<T> &a) {
   std::vector<T> b = a;

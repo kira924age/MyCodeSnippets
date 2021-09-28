@@ -1,3 +1,17 @@
+snippet prime_factor
+def prime_factor(n):
+    res, x = {}, 2
+    while x * x <= n:
+        while n % x == 0:
+            res[x] = res.get(x, 0) + 1
+            n //= x
+        x += 1
+    if n != 1:
+        res[n] = 1
+
+    return res
+endsnippet
+
 snippet shrink_coordinate
 def shrink_coordinate(a):
     b = sorted(list(set(a)))

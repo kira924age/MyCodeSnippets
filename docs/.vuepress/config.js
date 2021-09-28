@@ -41,6 +41,12 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: "整数論",
+        collapsable: false,
+        sidebarDepth: 3,
+        children: ["number_theory/prime_factrization"]
+      },
+      {
         title: "暗号",
         collapsable: false,
         sidebarDepth: 3,
