@@ -94,8 +94,8 @@ HELLO_WORLD
 
 ## 検証
 
-* [ABC146-B: ROT N](../solution/ABC146-B.md)
-* [JOI 2006-2007 予選 問題3: シーザー暗号](../solution/JOI2007yo-C.md)
+* [ABC146-B: ROT N](../solution/ABC146-B.html)
+* [JOI 2006-2007 予選 問題3: シーザー暗号](../solution/JOI2007yo-C.html)
 
 ## 参考文献
 

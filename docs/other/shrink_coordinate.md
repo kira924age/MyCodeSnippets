@@ -65,11 +65,11 @@ C++ の `std::map` は定数倍が遅いので, 数列 $A$ のある要素が座
 
 ## 検証
 
-* [ABC036-C: 座圧](../solution/ABC036-C)
-* [ABC113-C: ID](../solution/ABC113-C)
-* [ABC213-C: Reorder Cards](../solution/ABC213-C)
-* [ABC188-D: Sunuke Prime](../solution/ABC188-D)
-* [JOI 2012-2013 予選 問題5: 魚の生息範囲 (Fish)](../solution/JOI2013yo-E)
+* [ABC036-C: 座圧](../solution/ABC036-C.html)
+* [ABC113-C: ID](../solution/ABC113-C.html)
+* [ABC213-C: Reorder Cards](../solution/ABC213-C.html)
+* [ABC188-D: Sunuke Prime](../solution/ABC188-D.html)
+* [JOI 2012-2013 予選 問題5: 魚の生息範囲 (Fish)](../solution/JOI2013yo-E.html)
 
 ## 参考文献
 
