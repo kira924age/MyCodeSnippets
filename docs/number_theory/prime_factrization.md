@@ -62,6 +62,7 @@ def prime_factor(n):
 
 ## 検証
 
+* [AOJ NTL1-A: 素因数分解](../solution/AOJ-NTL1-A.html)
 * [JOI 春合宿 2007 day1-2 Factorial](../solution/JOI-SC2007-B.html)
 
 ## 参考文献
