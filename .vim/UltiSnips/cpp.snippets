@@ -14,6 +14,38 @@ std::map<long long, int> prime_factor(long long n) {
 }
 endsnippet
 
+snippet traveling_salesman_problem
+long long traveling_salesman_problem(int start_vertex, std::vector<std::vector<long long>> &G) {
+  const long long LINF = 1000000000000000018;
+
+  const int n = G[0].size();
+  std::vector<std::vector<long long>> dp((1 << n), std::vector<long long>(n, LINF));
+
+  for (int v = 0; v < n; v++) {
+    if (v == start_vertex) {
+      continue;
+    }
+    dp[1 << v][v] = G[start_vertex][v];
+  }
+
+  for (int S = 0; S < (1 << n); S++) {
+    for (int v = 0; v < n; v++) {
+      if ((S >> v) & 1) {
+        continue;
+      }
+      for (int u = 0; u < n; u++) {
+        if (!((S >> u) & 1)) {
+          continue;
+        }
+        dp[S | (1 << v)][v] = std::min(dp[S | (1 << v)][v], dp[S][u] + G[u][v]);
+      }
+    }
+  }
+
+  return dp[(1 << n) - 1][start_vertex];
+}
+endsnippet
+
 snippet shrink_coordinate
 template <class T> std::vector<int> shrink_coordinate(std::vector<T> &a) {
   std::vector<T> b = a;

@@ -7,6 +7,10 @@
 
 * [素因数分解](/number_theory/prime_factrization.html)
 
+## グラフ理論
+
+* [巡回セールスマン問題](/graph/traveling_salesman_problem.html)
+
 ## 暗号
 
 * [Caesar 暗号](/crypto/caesar_cipher.html)

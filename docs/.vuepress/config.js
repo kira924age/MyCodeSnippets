@@ -47,6 +47,12 @@ module.exports = {
         children: ["number_theory/prime_factrization"]
       },
       {
+        title: "グラフ理論",
+        collapsable: false,
+        sidebarDepth: 3,
+        children: ["graph/traveling_salesman_problem"]
+      },
+      {
         title: "暗号",
         collapsable: false,
         sidebarDepth: 3,

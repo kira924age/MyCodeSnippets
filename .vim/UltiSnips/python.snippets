@@ -12,6 +12,29 @@ def prime_factor(n):
     return res
 endsnippet
 
+snippet traveling_salesman_problem
+def traveling_salesman_problem(start_vertex, graph):
+    n = len(graph)
+    dp = [[float("inf")] * n for _ in range(1 << n)]
+
+    for v in range(n):
+        if v == start_vertex:
+            continue
+        dp[1 << v][v] = graph[start_vertex][v]
+
+    for bit in range(1 << n):
+        for v in range(n):
+            if (bit >> v) & 1:
+                continue
+            for u in range(n):
+                if not ((bit >> u) & 1):
+                    continue
+                dp[bit | (1 << v)][v] = min(dp[bit | (1 << v)][v],
+                                            dp[bit][u] + graph[u][v])
+
+    return dp[(1 << n) - 1][start_vertex]
+endsnippet
+
 snippet shrink_coordinate
 def shrink_coordinate(a):
     b = sorted(list(set(a)))
