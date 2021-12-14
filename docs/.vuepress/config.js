@@ -53,6 +53,12 @@ module.exports = {
         children: ["graph/traveling_salesman_problem"]
       },
       {
+        title: "データ構造",
+        collapsable: false,
+        sidebarDepth: 3,
+        children: ["data_structure/union_find"]
+      },
+      {
         title: "暗号",
         collapsable: false,
         sidebarDepth: 3,
