@@ -13,7 +13,7 @@
 
 ## データ構造
 
-* [素集合データ構造 (UnionFind)](/data_structure/union_find.html)
+* [Union Find Tree](/data_structure/union_find.html)
 
 ## 暗号
 

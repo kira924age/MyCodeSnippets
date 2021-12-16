@@ -91,3 +91,34 @@ std::string caesar_cipher(std::string &s, int n) {
   return res;
 }
 endsnippet
+
+snippet UnionFind
+struct UnionFind {
+  std::vector<int> parent_or_size;
+  int cnt;
+
+  UnionFind(int n) : parent_or_size(n, -1), cnt(n) {}
+
+  void unite(int x, int y) {
+    x = find_root(x);
+    y = find_root(y);
+    if (x == y) {
+      return;
+    }
+    if (-parent_or_size[x] < -parent_or_size[y]) {
+      std::swap(x, y);
+    }
+    parent_or_size[x] += parent_or_size[y];
+    parent_or_size[y] = x;
+    cnt--;
+  }
+  bool is_same_root(int x, int y) { return find_root(x) == find_root(y); }
+  int find_root(int x) {
+    if (parent_or_size[x] < 0) {
+      return x;
+    }
+    return parent_or_size[x] = find_root(parent_or_size[x]);
+  }
+  int size(int x) { return -parent_or_size[find_root(x)]; }
+};
+endsnippet

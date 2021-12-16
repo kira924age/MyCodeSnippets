@@ -52,3 +52,32 @@ def caesar_cipher(s, n):
 
     return "".join([d.get(c, c) for c in s])
 endsnippet
+
+snippet UnionFind
+class UnionFind:
+    def __init__(self, n):
+        self.parent_or_size = [-1 for _ in range(n)]
+        self.cnt = n
+
+    def unite(self, x, y):
+        x, y = self.find_root(x), self.find_root(y)
+        if x == y:
+            return
+        if -self.parent_or_size[x] < -self.parent_or_size[y]:
+            x, y = y, x
+        self.parent_or_size[x] += self.parent_or_size[y]
+        self.parent_or_size[y] = x
+        self.cnt -= 1
+
+    def is_same_root(self, x, y):
+        return self.find_root(x) == self.find_root(y)
+
+    def find_root(self, x):
+        if self.parent_or_size[x] < 0:
+            return x
+        self.parent_or_size[x] = self.find_root(self.parent_or_size[x])
+        return self.parent_or_size[x]
+
+    def size(self, x):
+        return -self.parent_or_size[self.find_root(x)]
+endsnippet
