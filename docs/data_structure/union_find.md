@@ -97,6 +97,7 @@ class UnionFind:
 * [AOJ-DPL1-A: Disjoint Set: Union Find Tree](../solution/AOJ-DPL1-A.html)
 * [AtCoder Typical Contest 001-B: Union Find](../solution/ATC001-B.html)
 * [AtCoder Beginner Contest 126-E: 1 or 2](../solution/ABC126-E.html)
+* [AtCoder Beginner Contest 157-D: Friend Suggestions](../solution/ABC157-D.html)
 
 ## 参考文献
 
