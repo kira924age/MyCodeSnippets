@@ -1,25 +1,31 @@
-# Union Find Tree
+# ABC126-E: 1 or 2
 
-## 概要
+## 問題
 
-Union Find Tree はデータを互いに素な集合に分割して保持することで以下の2つの操作を効率的に行えるデータ構造.
+* [https://atcoder.jp/contests/abc126/tasks/abc126_e](https://atcoder.jp/contests/abc126/tasks/abc126_e)
 
-* Union: 2つの集合を1つに統合する
-* Find: 特定の要素がどの集合に属しているか求める
+## 解説
 
-Union Find Tree は素集合データ構造 (disjoint-set data structure) とも呼ばれている.
+$A_i$ は 1 or 2 なので偶奇が分かれば数字を当てることができる.
 
-## 計算量
+$A_{X_i} + A_{Y_i} + Z_i$ が偶数であることを知っているならば,
+$A_{X_i} + A_{Y_i}$ の偶奇が分かるので $A_{X_i},  A_{Y_i}$ のうち一方が分かれば他方が分かる.
 
-* $O(\alpha(n))$
+ここで $X_i$ と $Y_i$ にのみ辺が貼られているグラフを考えると,
+同じ連結成分に属する頂点のうち1つでも値が分かれば, その連結成分の値は全て分かる.
 
-$\alpha$ はアッカーマン関数の逆関数.
+よって, 連結成分の個数が答え.
 
-## Snippet
+## 実装例
 
 ### C++
 
+* submission: [https://atcoder.jp/contests/abc126/submissions/27945784](https://atcoder.jp/contests/abc126/submissions/27945784)
+
 ```cpp
+#include <iostream>
+#include <vector>
+
 struct UnionFind {
   std::vector<int> parent_or_size;
   int cnt;
@@ -48,11 +54,33 @@ struct UnionFind {
   }
   int size(int x) { return -parent_or_size[find_root(x)]; }
 };
+
+int main() {
+  int N, M;
+  std::cin >> N >> M;
+
+  UnionFind uf_tree(N);
+
+  while (M--) {
+    int X, Y, Z;
+    std::cin >> X >> Y >> Z;
+
+    uf_tree.unite(X - 1, Y - 1);
+  }
+
+  std::cout << uf_tree.cnt << "\n";
+  return 0;
+}
 ```
 
 ### Python
 
+* submission: [https://atcoder.jp/contests/abc126/submissions/27945811](https://atcoder.jp/contests/abc126/submissions/27945811)
+
 ```python
+#!/usr/bin/env python3
+
+
 class UnionFind:
     def __init__(self, n):
         self.parent_or_size = [-1 for _ in range(n)]
@@ -79,24 +107,16 @@ class UnionFind:
 
     def size(self, x):
         return -self.parent_or_size[self.find_root(x)]
+
+
+N, M = map(int, input().split())
+
+uf_tree = UnionFind(N)
+
+for _ in range(M):
+    X, Y, Z = map(int, input().split())
+    uf_tree.unite(X - 1, Y - 1)
+
+print(uf_tree.cnt)
 ```
-
-## 解説
-
-初期状態は頂点数が $n$ で辺がない状態のグラフとみなすことができる.
-このグラフに対して以下のような操作ができる.
-
-* `unite(x, y)` : 頂点 x と y が属する2つの集合を1つにマージする
-* `is_same_root(x, y)` : 頂点 x と y が同じ集合に属するかを判定する
-* `find_root(x)` : 頂点 x が属する集合の根 (代表元) を返す
-* `size(x)` : 頂点 x が属する集合のサイズを返す
-* `cnt` : グラフの連結成分の個数(集合の個数)
-
-## 検証
-
-* [AOJ-DPL1-A: Disjoint Set: Union Find Tree](../solution/AOJ-DPL1-A.html)
-* [AtCoder Typical Contest 001-B: Union Find](../solution/ATC001-B.html)
-* [AtCoder Beginner Contest 126-E: 1 or 2](../solution/ABC126-E.html)
-
-## 参考文献
 
