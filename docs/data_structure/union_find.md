@@ -99,6 +99,7 @@ class UnionFind:
 * [ABC126-E: 1 or 2](../solution/ABC126-E.html)
 * [ABC157-D: Friend Suggestions](../solution/ABC157-D.html)
 * [ABC120-D: Decayed Bridges](../solution/ABC120-D.html)
+* [ICPC模擬国内予選2020-B: 爆発の連鎖](../solution/AOJ3202.html)
 * [ICPC国内予選2020-B: 追跡調査](../solution/AOJ1641.html)
 
 ## 参考文献
