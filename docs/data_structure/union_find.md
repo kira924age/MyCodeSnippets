@@ -92,6 +92,8 @@ class UnionFind:
 * `size(x)` : 頂点 x が属する集合のサイズを返す
 * `cnt` : グラフの連結成分の個数(集合の個数)
 
+Union Find Tree には集合の結合はできても分割はできないという性質がある.
+
 ## 検証
 
 * [AOJ-DPL1-A: Disjoint Set: Union Find Tree](../solution/AOJ-DPL1-A.html)
@@ -99,6 +101,7 @@ class UnionFind:
 * [ABC120-D: Decayed Bridges](../solution/ABC120-D.html)
 * [ABC126-E: 1 or 2](../solution/ABC126-E.html)
 * [ABC157-D: Friend Suggestions](../solution/ABC157-D.html)
+* [ABC217-D: Cutting Woods](../solution/ABC217-D.html)
 * [ABC229-E: Graph Destruction](../solution/ABC229-E.html)
 * [ICPC模擬国内予選2020-B: 爆発の連鎖](../solution/AOJ3202.html)
 * [ICPC国内予選2020-B: 追跡調査](../solution/AOJ1641.html)
