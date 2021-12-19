@@ -96,9 +96,10 @@ class UnionFind:
 
 * [AOJ-DPL1-A: Disjoint Set: Union Find Tree](../solution/AOJ-DPL1-A.html)
 * [ATC001-B: Union Find](../solution/ATC001-B.html)
+* [ABC120-D: Decayed Bridges](../solution/ABC120-D.html)
 * [ABC126-E: 1 or 2](../solution/ABC126-E.html)
 * [ABC157-D: Friend Suggestions](../solution/ABC157-D.html)
-* [ABC120-D: Decayed Bridges](../solution/ABC120-D.html)
+* [ABC229-E: Graph Destruction](../solution/ABC229-E.html)
 * [ICPC模擬国内予選2020-B: 爆発の連鎖](../solution/AOJ3202.html)
 * [ICPC国内予選2020-B: 追跡調査](../solution/AOJ1641.html)
 
