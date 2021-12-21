@@ -90,11 +90,10 @@ $ echo URYYB_JBEYQ | tr A-Z N-ZA-M | tr a-z n-za-m
 HELLO_WORLD
 ```
 
-解読方法としてはシフトする文字数が26通りしかないため総当たり攻撃 (Brute-force attack) が有効であると考えられる.
-
 ## 検証
 
 * [ABC146-B: ROT N](../solution/ABC146-B.html)
+* [ABC232-B: Caesar Cipher](../solution/ABC232-B.html)
 * [JOI 2006-2007 予選 問題3: シーザー暗号](../solution/JOI2007yo-C.html)
 
 ## 参考文献
