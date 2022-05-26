@@ -22,7 +22,15 @@ module.exports = {
       md.use(require("markdown-it-texmath"));
     }
   },
-  plugins: [["vuepress-plugin-code-copy", true]],
+  plugins: [
+    ["vuepress-plugin-code-copy", true],
+    [
+      "@vuepress/google-analytics",
+      {
+        ga: "G-8TFTZMEEX1"
+      }
+    ]
+  ],
 
   title: "My Code Snippets2",
   theme: "default-prefers-color-scheme",
