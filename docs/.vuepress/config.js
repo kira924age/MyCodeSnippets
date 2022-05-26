@@ -15,6 +15,23 @@ module.exports = {
         href: "https://fonts.googleapis.com/icon?family=Material+Icons",
         rel: "stylesheet"
       }
+    ],
+    [
+      "script",
+      {
+        async: "true",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-8TFTZMEEX1"
+      }
+    ],
+    [
+      "script",
+      {},
+      `
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', 'G-8TFTZMEEX1');
+      `
     ]
   ],
   markdown: {
@@ -22,15 +39,7 @@ module.exports = {
       md.use(require("markdown-it-texmath"));
     }
   },
-  plugins: [
-    ["vuepress-plugin-code-copy", true],
-    [
-      "@vuepress/google-analytics",
-      {
-        ga: "G-8TFTZMEEX1"
-      }
-    ]
-  ],
+  plugins: [["vuepress-plugin-code-copy", true]],
 
   title: "My Code Snippets2",
   theme: "default-prefers-color-scheme",
