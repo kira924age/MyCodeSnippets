@@ -19,7 +19,7 @@ module.exports = {
   ],
   markdown: {
     extendMarkdown: md => {
-      md.use(require("markdown-it-katex"));
+      md.use(require("markdown-it-texmath"));
     }
   },
   plugins: [["vuepress-plugin-code-copy", true]],
@@ -50,7 +50,7 @@ module.exports = {
         title: "グラフ理論",
         collapsable: false,
         sidebarDepth: 3,
-        children: ["graph/traveling_salesman_problem"]
+        children: ["graph/traveling_salesman_problem", "graph/dijkstra"]
       },
       {
         title: "データ構造",

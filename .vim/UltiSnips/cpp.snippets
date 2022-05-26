@@ -14,6 +14,46 @@ std::map<long long, int> prime_factor(long long n) {
 }
 endsnippet
 
+snippet dijkstra
+struct Edge {
+  int dst;
+  long long cost;
+  Edge() {}
+  Edge(int x, long long y) : dst(x), cost(y) {}
+};
+
+std::vector<long long> dijkstra(int sv, std::vector<std::vector<Edge>> &graph) {
+  const long long LINF = 1000000000000000018;
+
+  std::vector<long long> dist(graph.size(), LINF);
+  dist[sv] = 0;
+
+  typedef std::pair<long long, int> PLI;
+  std::priority_queue<PLI, std::vector<PLI>, std::greater<PLI>> que;
+
+  que.push(make_pair(0, sv));
+
+  while (!que.empty()) {
+    std::pair<long long, int> cur = que.top();
+    que.pop();
+
+    if (dist[cur.second] < cur.first) {
+      continue;
+    }
+
+    for (int i = 0; i < graph[cur.second].size(); i++) {
+      Edge edge = graph[cur.second][i];
+      if (dist[cur.second] + edge.cost < dist[edge.dst]) {
+        dist[edge.dst] = dist[cur.second] + edge.cost;
+        que.push(make_pair(dist[edge.dst], edge.dst));
+      }
+    }
+  }
+
+  return dist;
+}
+endsnippet
+
 snippet traveling_salesman_problem
 long long traveling_salesman_problem(int start_vertex, std::vector<std::vector<long long>> &G) {
   const long long LINF = 1000000000000000018;

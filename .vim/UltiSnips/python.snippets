@@ -12,6 +12,27 @@ def prime_factor(n):
     return res
 endsnippet
 
+snippet dijkstra
+def dijkstra(start_vertex, graph):
+    dist = [
+        0 if i == start_vertex else float("inf") for i in range(len(graph))
+    ]
+    que = []
+    heapq.heappush(que, (0, start_vertex))
+
+    while que:
+        cur_distance, cur_vertex = heapq.heappop(que)
+        if dist[cur_vertex] < cur_distance:
+            continue
+
+        for nxt_vertex, cost in graph[cur_vertex]:
+            if dist[cur_vertex] + cost < dist[nxt_vertex]:
+                dist[nxt_vertex] = dist[cur_vertex] + cost
+                heapq.heappush(que, (dist[nxt_vertex], nxt_vertex))
+
+    return dist
+endsnippet
+
 snippet traveling_salesman_problem
 def traveling_salesman_problem(start_vertex, graph):
     n = len(graph)

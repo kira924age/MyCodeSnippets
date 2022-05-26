@@ -9,6 +9,7 @@
 
 ## グラフ理論
 
+* [最短経路問題 (ダイクストラ法)](/graph/dijkstra.html)
 * [巡回セールスマン問題](/graph/traveling_salesman_problem.html)
 
 ## データ構造
